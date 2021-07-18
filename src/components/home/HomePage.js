@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Button, Container } from "shards-react";
+import Header from "../header/Header";
+import JoinRoom from "../header/JoinRoom";
+import CreateRoomModal from "./CreateRoomModal";
 
-function App() {
+function HomePage() {
+
+  const [ createRoomModalVisible, setCreateRoomModalVisible] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <JoinRoom />
+      </Header>
+      <Container>
+        <Button theme="primary" onClick={(e) => setCreateRoomModalVisible(true)}>Create Room</Button>
+        <CreateRoomModal open={createRoomModalVisible} toggle={e => setCreateRoomModalVisible(!createRoomModalVisible)} />
+      </Container>
     </div>
   );
 }
 
-export default App;
+export default HomePage;

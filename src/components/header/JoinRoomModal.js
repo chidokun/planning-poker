@@ -1,26 +1,25 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, FormInput, Modal, ModalBody, ModalFooter, ModalHeader } from "shards-react";
 
-function CreateRoomModal(props) {
+function JoinRoomModal(props) {
+  const [ name, setName ] = useState("");
   return (
     <Modal size="md" open={props.open} toggle={props.toggle} animation={true}>
-      <ModalHeader>Create Room</ModalHeader>
+      <ModalHeader>Join Room</ModalHeader>
       <ModalBody>
         <Form>
           <FormGroup>
-            <label htmlFor="#room-name">Room Name</label>
-            <FormInput id="#room-name" placeholder="Enter your Room Name" />
-          </FormGroup>
-          <FormGroup>
             <label htmlFor="#your-name">Your Name</label>
-            <FormInput id="#your-name" placeholder="Enter your Name" />
+            <FormInput id="#your-name" placeholder="Enter your Name" onChange={e => setName(e.target.value)} value={name} />
           </FormGroup>
         </Form>
       </ModalBody>
       <ModalFooter>
-        <Button theme="primary">Create Room</Button>
+        <Link to={"/room/" + name}><Button theme="primary" >Join Room</Button></Link> 
       </ModalFooter>
     </Modal>
   );
 }
 
-export default CreateRoomModal;
+export default JoinRoomModal;

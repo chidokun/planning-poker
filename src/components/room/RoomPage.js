@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useParams } from "react-router-dom";
+import { Button, Container, Nav, NavItem } from "shards-react";
+import LargeCard from "../common/LargeCard";
+import SmallCard from "../common/SmallCard";
+import Header from "../header/Header";
 
-function App() {
+function RoomPage() {
+  let { roomId } = useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <Nav navbar>
+          <NavItem>
+            Room ID: {roomId}
+          </NavItem>
+        </Nav>
+        <Nav navbar className="ml-auto">
+          <NavItem>
+            User ID: ABCXYZ
+          </NavItem>
+          <NavItem>
+            <Button theme="danger">Leave Room</Button>
+          </NavItem>
+        </Nav>
+      </Header>
+      <Container fluid={true}>
+        <LargeCard />
+        <SmallCard />
+      </Container>
+
+
     </div>
   );
 }
 
-export default App;
+export default RoomPage;

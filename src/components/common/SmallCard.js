@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Card } from "shards-react";
+import card from '../../resources/card.jpg';
 
-function App() {
+function SmallCard() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pn-small-card">
+      <div className="pn-card">
+        <Card style={{ height: 90, width: 60, overflow: 'hidden' }}>
+          
+        </Card>
+      </div>
+      <div className="pn-card-name">Tuan hihi</div>
     </div>
   );
 }
 
-export default App;
+export default SmallCard;
