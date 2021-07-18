@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/resources/styles.css"],"names":[],"mappings":"AACA,UACI,iEACJ","file":"main.5f07d9e1.chunk.css","sourcesContent":["\n.p-header {\n    box-shadow: rgb(17 31 93 / 8%) 3px 0px 30px, rgb(27 27 43 / 9%) 2px 0px 5px;\n}"]}
