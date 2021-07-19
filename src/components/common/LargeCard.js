@@ -1,17 +1,22 @@
 import { Card } from "shards-react";
 import card from '../../resources/card.jpg';
+import cardGray from '../../resources/card-gray.jpg';
 
-function LargeCard() {
+function LargeCard(props) {
   return (
-    <div className="pn-large-card">
-      <div className="pn-card pn-large-card">
-        <Card style={{ height: 180, width: 140, overflow: 'hidden' }}>
-          <div style={{ overflow: 'hidden', height: '100%' }}>
-            <img src={card} alt="card-background" width={140} />
-          </div>
-        </Card>
-      </div>
-      <div className="pn-card-name">Tuan hihi</div>
+    <div className="p-large-card">
+      <Card className="p-card">
+        {
+          props.mode === "open"
+          ? <div className="p-background"><img src={cardGray} alt="card-background" width={140} /></div>
+          : props.mode === "selected"
+          ? <div className="p-background"><img src={card} alt="card-background" width={140} /></div>
+          : props.mode === "show"
+          ? <div className="p-number"><span>{props.number}</span></div>
+          : ''
+        }
+      </Card>
+      <div className="p-card-name">{props.name}</div>
     </div>
   );
 }

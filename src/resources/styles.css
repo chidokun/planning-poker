@@ -1,4 +1,121 @@
-
 .p-header {
+  box-shadow: rgb(17 31 93 / 8%) 3px 0px 30px, rgb(27 27 43 / 9%) 2px 0px 5px;
+}
+
+.p-large-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-large-card .p-card {
+  margin-bottom: 10px;
+  height: 180px;
+  width: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-large-card .p-background {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.p-large-card .p-number {
+  font-size: 80px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-card-name {
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.p-small-card {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.p-small-card .p-card {
+  height: 90px;
+  width: 60px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgb(17 31 93 / 8%) 3px 0px 30px, rgb(27 27 43 / 9%) 2px 0px 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.p-small-card .p-card:hover {
+    transition: 0.5s;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(90 97 105 / 10%), 0 0.9375rem 1.40625rem rgb(90 97 105 / 10%), 0 0.25rem 0.53125rem rgb(90 97 105 / 12%), 0 0.125rem 0.1875rem rgb(90 97 105 / 10%);
+}
+
+.p-small-card .p-number {
+  font-size: 32px;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.p-dockbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
     box-shadow: rgb(17 31 93 / 8%) 3px 0px 30px, rgb(27 27 43 / 9%) 2px 0px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.p-dock {
+    margin-top: -50px;
+}
+
+.p-dock .p-small-card {
+    margin-left: 15px;
+}
+
+.p-room-bar {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-room-title {
+    font-size: 24px;
+}
+
+.p-room-space {
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+}
+
+.mr10 {
+    margin-right: 10px;
 }
